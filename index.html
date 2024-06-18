@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style>
+                    body {
+                              padding-top: 30vh;
+                              justify-content: center;
+                              text-align: center;
+                              display: flex;
+                    }
+                    .container {
+                              /* justify-content: center;
+                              text-align: center; */
+                              font-family: monospace;
+                              background-color: antiquewhite;
+                              padding: 20px;
+                              width: 200px;
+                              border-radius: 10px;
+                              border: solid 0.5px;
+
+                    }
+
+
+                    #display-quote {
+                              
+                              background-color: khaki;
+                              /* border:solid 1px; */
+                              border-radius: 10px;
+                              padding: 5px;
+          
+                    }
+
+                    button {
+                              border-radius: 5px;
+                    }
+
+                    button:hover {
+                              background-color: rgb(78, 69, 57);
+                              color: khaki;
+                    }
+        
+          </style>
+</head>
+<body>  
+          <div class="container">
+                    <h1>RANDOM QUOTE GENERATOR</h1>
+                    <p id="display-quote"></p>
+                    <button onclick="generateQuote()">Generate Quote</button>
+          </div>
+
+          <script>
+                    const quotes = [
+                              "'I'm not superstitious but I am a little stitous.' -MICHAELL SCOTT-",
+                              "'I'm sick of following my dreams, man. I'm going to ask where they're going and hook with them up later.' -MITCH HEDBERG-",
+                              "'My mother always used to say: The older you get, the better you get, unless you're a banana.' -Betty White-",
+                              "'I refuse to join any club that would have me as a member.' —Groucho Marx-",
+                              "'I always wanted to be somebody, but now I realize I should have been more specific. —Lily Tomlin-",
+                              "'If you think nobody cares if you're alive, try missing a couple of car payments. — Earl Wilson-",
+                              "'I can resist everything except temptation. — Oscar Wilde-",
+                              "'I find television very educational. Every time someone turns it on, I go in the other room and read a book. — Groucho Marx-",
+                              "'Behind every great man is a woman rolling her eyes. — Jim Carrey-",
+                              "'I'm writing a book. I've got the page numbers done. — Steven Wright-",
+                              "'A day without sunshine is like, you know, night. — Steve Martin-",
+                              "'Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes! — Billy Connolly",
+                              "'The only mystery in life is why the kamikaze pilots wore helmets. — Al McGuire-"
+                    ]
+
+                    function generateQuote() {
+                              const displayQuote = document.getElementById('display-quote');
+                              const randomGenerator = Math.floor(Math.random() * quotes.length);
+                              displayQuote.textContent = quotes[randomGenerator]
+                    }
+
+          </script>
+</body>
+</html>
